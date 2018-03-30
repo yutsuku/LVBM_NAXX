@@ -33,11 +33,11 @@ LVBM.AddOns.Gluth = {
 	["OnCombatStart"] = function(delay)
 		LVBM.AddOns.Gluth.Decimated = false;
 		LVBM.Announce(LVBM_GLUTH_DECIMATE_WARN1);
-		LVBM.Schedule(50 - delay, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 60);
-		LVBM.Schedule(90 - delay, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 20);				
-		LVBM.Schedule(105 - delay, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 5);
+		LVBM.Schedule(45 - delay, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 60);
+		LVBM.Schedule(85 - delay, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 20);				
+		LVBM.Schedule(100 - delay, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 5);
 		LVBM.EndStatusBarTimer("Decimate");
-		LVBM.StartStatusBarTimer(110 - delay, "Decimate");
+		LVBM.StartStatusBarTimer(105 - delay, "Decimate");
 	end,
 	["OnCombatEnd"] = function()
 		LVBM.AddOns.Gluth.Decimated = false;
@@ -60,12 +60,12 @@ LVBM.AddOns.Gluth = {
 				LVBM.AddOns.Gluth.Decimated = true;
 				LVBM.Announce(LVBM_GLUTH_DECIMATE_WARN2);
 				LVBM.UnSchedule("LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 5)
-				LVBM.Schedule(10, "LVBM.AddOns.Gluth.OnEvent", "ResetDecimate");
-				LVBM.Schedule(50, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 60);
-				LVBM.Schedule(90, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 20);				
-				LVBM.Schedule(105, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 5);
+				LVBM.Schedule(5, "LVBM.AddOns.Gluth.OnEvent", "ResetDecimate");
+				LVBM.Schedule(45, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 60);
+				LVBM.Schedule(85, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 20);				
+				LVBM.Schedule(100, "LVBM.AddOns.Gluth.OnEvent", "DecimateWarning", 5);
 				LVBM.EndStatusBarTimer("Decimate");
-				LVBM.StartStatusBarTimer(110, "Decimate");
+				LVBM.StartStatusBarTimer(105, "Decimate");
 			end					
 
 		elseif (event == "CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE" 

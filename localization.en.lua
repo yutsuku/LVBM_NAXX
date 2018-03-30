@@ -127,7 +127,7 @@ LVBM_HTU_TELEPORT_BACK_WARNING	= "*** Teleport back in %s seconds ***";
 
 LVBM_HTU_YELL_START1 		= "You... are next.";
 LVBM_HTU_YELL_START2 		= "I see you...";
-LVBM_HTU_YELL_START3 		= "You are mine now.";
+LVBM_HTU_YELL_START3 		= "You are mine now!";
 
 LVBM_SBT["Teleport"]		= "Teleport";
 LVBM_SBT["Teleport Back"]	= "Teleport Back";

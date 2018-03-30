@@ -23,11 +23,11 @@ LVBM.AddOns.AnubRekhan = {
 	["OnEvent"] = function(event, arg1)
 		if (event == "CHAT_MSG_MONSTER_YELL") then
 			if (arg1 == LVBM_AR_YELL_1) or (arg1 == LVBM_AR_YELL_2) or (arg1 == LVBM_AR_YELL_3) then
-				LVBM.Announce(string.format(LVBM_AR_LOCUST_WARNING, 90));
-				LVBM.StartStatusBarTimer(90, "Locust Swarm");
-				LVBM.Schedule(30, "LVBM.AddOns.AnubRekhan.OnEvent", "LocustWarning", 60);
-				LVBM.Schedule(60, "LVBM.AddOns.AnubRekhan.OnEvent", "LocustWarning", 30);
-				LVBM.Schedule(80, "LVBM.AddOns.AnubRekhan.OnEvent", "LocustWarning", 10);
+				LVBM.Announce(string.format(LVBM_AR_LOCUST_WARNING, 80));
+				LVBM.StartStatusBarTimer(80, "Locust Swarm");
+				LVBM.Schedule(20, "LVBM.AddOns.AnubRekhan.OnEvent", "LocustWarning", 60);
+				LVBM.Schedule(50, "LVBM.AddOns.AnubRekhan.OnEvent", "LocustWarning", 30);
+				LVBM.Schedule(70, "LVBM.AddOns.AnubRekhan.OnEvent", "LocustWarning", 10);
 			end
 		elseif (event == "CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF") then
 			if (arg1 == LVBM_AR_CAST_LOCUST_SWARM) then

@@ -28,7 +28,7 @@ LVBM.AddOns.GrandWidowFaerlina = {
 	},
 	["OnCombatStart"] = function(delay)
 		LVBM.Announce(string.format(LVBM_GWF_ENRAGE_WARNING2, 60));
-		LVBM.StartStatusBarTimer(54, "Enrage");
+		LVBM.StartStatusBarTimer(60, "Enrage");
 		LVBM.Schedule(39, "LVBM.AddOns.GrandWidowFaerlina.OnEvent", "EnrageWarning", 15);
 		LVBM.Schedule(44, "LVBM.AddOns.GrandWidowFaerlina.OnEvent", "EnrageWarning", 10);
 		LVBM.Schedule(49, "LVBM.AddOns.GrandWidowFaerlina.OnEvent", "EnrageWarning", 5);
@@ -69,7 +69,7 @@ LVBM.AddOns.GrandWidowFaerlina = {
 					timeLeft = 0;
 				end
 				if LVBM.AddOns.GrandWidowFaerlina.Enraged then
-					tmpEnrageTime = 54;
+					tmpEnrageTime = 60;
 				else
 					tmpEnrageTime = 30;
 				end

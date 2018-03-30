@@ -30,6 +30,7 @@ LVBM.AddOns.Maexxna = {
 		["CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE"] = true,
 		["CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE"] = true,
 		["CHAT_MSG_COMBAT_FRIENDLY_DEATH"] = true,
+		["CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE"] = true,
 	},	
 	["OnCombatStart"] = function(delay)
 			LVBM.Schedule(25 - delay, "LVBM.AddOns.Maexxna.OnEvent", "SprayWarning", 15);
@@ -43,6 +44,8 @@ LVBM.AddOns.Maexxna = {
 		if (event == "CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS" 
 		    or event == "CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE" 
 		    or event == "CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE" 
+			or event == "CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE"
+			or event == "CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE"
 		    or event == "CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE") then
 			if (string.find(arg1, LVBM_MAEXXNA_WEB_SPRAY) and (not LVBM.AddOns.Maexxna.isSpraying)) then			
 				LVBM.Schedule(25, "LVBM.AddOns.Maexxna.OnEvent", "SprayWarning", 15);
